@@ -4,6 +4,7 @@
     export let description;
     export let image;
 
+
     let el;
     let expanded = false;
     let showDesc = false;

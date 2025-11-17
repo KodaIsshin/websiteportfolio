@@ -7,7 +7,7 @@
         },
         {
             "title": "Blinkey",
-            "description": "A facial recognition app that manages entry authorization. Movement and detection is sparked by blinking.",
+            "description": "A facial recognition app that manages entry authorization. Movement and detection is sparked by blinking. The app utilizes a ML library called InsightFace in order to generate the embeddings of a user's face, by which we made a Python Backend to calculate and then store in a firebase database. The frontend was developed with Flutter, and included a ticket hub, connections to organizations, and a feature to update a user's face and credentials. ",
             "image": "src/assets/blinkey.png"
         },
         {
@@ -23,13 +23,8 @@
         {
             "title": "Simple Game",
             "description": "A simple game developed in Godot, aimed to assist people with cognitive deficiencies be able to improve their function.",
-            "image": "src/assets/elementor-placeholder-image.png"
+            "image": "src/assets/simple.png"
 
-        },
-        {
-            "title": "Project ESPER",
-            "description": "A project that attempts to recreate ChatGPT on a Macbook Pro M4. It is a sandbox project for me to exercise a plethora of techniques to learn, optimize, and recreate the performance and intelligence of large language models on consumer hardware.",
-            "image": "src/assets/elementor-placeholder-image.png"
         }
 
     ]

@@ -10,22 +10,30 @@
   let resume_txt = "Resume"
   let intro_txt = "Hi, my name is Keith."
   let projects = projectsdata.projects;
-  function typeEffect(element, text, speed = 60) {
-  return new Promise(resolve => {
-    let i = 0, isTag = false;
+  // function typeEffect(element, text, speed = 60) {
+  //   return new Promise(resolve => {
+  //     let i = 0, isTag = false;
 
-    (function type() {
-      element.innerHTML = text.slice(0, ++i) + `<span class="blinker"></span>`;
-      const char = text.slice(i - 1);
-      if (char === "<") isTag = true;
-      if (char === ">") isTag = false;
-      if (i === text.length) return resolve();
+  //     (function type() {
+  //       element.innerHTML = text.slice(0, ++i) + `<span class="blinker"></span>`;
+  //       const char = text.slice(i - 1);
+  //       if (char === "<") isTag = true;
+  //       if (char === ">") isTag = false;
+  //       if (i === text.length) return resolve();
 
-      if (isTag) return type();
-      setTimeout(type, speed);
-    })();
-  });
-}
+  //       if (isTag) return type();
+  //       setTimeout(type, speed);
+  //     })();
+  //   });
+  // }
+  function scrollSmooth(element_name){
+    const element = document.getElementById(element_name);
+    let yOffset = -70;
+    const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    window.scrollTo({top: y, behavior: 'smooth'});
+      
+
+  }
 
 
 </script>
@@ -34,16 +42,16 @@
   <div class="bar_content">
     <div class="left">{leftText}</div>
     <nav class="info-bar">
-      <button class="about_btn">{abt_txt}</button>
-      <button class="proj_btn">{project_txt}</button>
-      <button class="resume_btn">{resume_txt}</button>
-      <button class="contact_btn">Connections</button>
+      <button class="about_btn"on:click={() => scrollSmooth('about')}>{abt_txt}</button>
+      <button class="proj_btn"on:click={() => scrollSmooth('projects')}>{project_txt}</button>
+      <button class="resume_btn" on:click={() => scrollSmooth('resume')}>{resume_txt}</button>
+      <button class="contact_btn" on:click={() => scrollSmooth('connections')}>Connections</button>
     </nav>
   </div>
 </header>
 
 <main>
-  <div class="about_square">
+  <div id="about" class="about_square">
     <div class="about_container">
       <h1 class="intro_head">{intro_txt}</h1>
     </div>
@@ -58,7 +66,7 @@
     </p>
   </div>
 
-  <div class= "projects_section">
+  <div id="projects" class= "projects_section">
     <h1 class="proj_head">Projects</h1>
     <div class="project_container">
       {#each projects as project}
@@ -67,15 +75,23 @@
     </div>
   </div>
 
-  <div class= "resume_section">
+  <div id="resume" class= "resume_section">
     <h1 class="resume_head"> Resume</h1>
     <a href="src/assets/Resume.png" download>
       <img class="resume_pdf" src="src/assets/Resume.png" alt="My Resume"/>
     </a>
   </div>
 
-  <div class= "contact_section">
+  <div id="connections" class= "contact_section">
     <h1 class="contact_head"> Connections</h1>
+    <div class="contact_container">
+      <a href="https://github.com/KodaIsshin" target="_blank" rel="noreferrer">
+        <img class="github_img" src="src/assets/github_logo.png" alt="GitHub" />
+      </a>
+      <a href="https://www.linkedin.com/in/keith-natakusuma-79785b2b8/">
+        <img class="linkedin_img" src="src/assets/linkedin_logo.png" alt="LinkedIn" />
+      </a>
+    </div>
   </div>
 </main>
 
@@ -145,7 +161,6 @@
     padding: 0 6vw;
     z-index: 9999;
   }
-
   .project_container{
     position: relative;
     display: grid;
@@ -242,6 +257,33 @@
     font-size: .85vw;
     font-family: Sunshine LB;
     color: #8f8f8f50
+  }
+
+  .contact_container{
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+  }
+
+  .github_img, .linkedin_img{
+    height: 50px;
+    width: 50px;
+    transition: 0.3s ease-in-out;
+    will-change: filter;
+    border-radius: 8px;
+    transition: ease-in-out 0.3s;
+  }
+
+  .github_img:hover{
+    filter: drop-shadow(0 0 15px #ffffffaa);
+    cursor: pointer;
+  }
+
+  .linkedin_img:hover{
+    filter: drop-shadow(0 0 15px #0e76a8aa);
+    cursor: pointer;
   }
 
 </style>
