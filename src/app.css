@@ -14,6 +14,8 @@
   --spacing: .25rem;
   --topbar-h: 55px;
   --topbar-gap: 6px;
+  min-width: 450px;
+  min-height: 450px;
 }
 
 @font-face {
@@ -56,7 +58,16 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
+  min-width: 450px;
+  min-height: 450px;
+}
+
+:global(body){
+  margin: 0;
+}
+
+:global(*){
+  box-sizing: border-box;
 }
 
 h1 {
