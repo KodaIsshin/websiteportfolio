@@ -14,6 +14,8 @@
   --spacing: .25rem;
   --topbar-h: 55px;
   --topbar-gap: 6px;
+  min-width: 450px;
+  min-height: 450px;
 }
 
 @font-face {
@@ -55,9 +57,14 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
+  min-width: 450px;
+  min-height: 450px;
 }
+
+:global(body){
+  margin: 0;
+}
+
 
 h1 {
   font-size: 3.2em;
@@ -69,10 +76,8 @@ h1 {
 }
 
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
   padding: 2rem;
-  text-align: center;
+  flex: 1;
 }
 
 button {

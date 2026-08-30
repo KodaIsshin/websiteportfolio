@@ -1,30 +1,29 @@
 {
     "projects": [
         {
-            "title": "Unarmed",
-            "description": "A 3D Roguelike Game developed in the Godot Engine. It is a passion project between me and a friend of mine. The game is a work in progress, and is a FPS set in a dystopian cyberpunk, delving into the possible consequence of AI use and the inversion of society as a result of technology.",
-            "image": "src/assets/unarmed.png"
-        },
-        {
             "title": "Blinkey",
             "description": "A facial recognition app that manages entry authorization. Movement and detection is sparked by blinking. The app utilizes a ML library called InsightFace in order to generate the embeddings of a user's face, by which we made a Python Backend to calculate and then store in a firebase database. The frontend was developed with Flutter, and included a ticket hub, connections to organizations, and a feature to update a user's face and credentials. ",
-            "image": "src/assets/blinkey.png"
+            "image": "src/assets/images/personal/blinkey.png",
+            "link": "https://devpost.com/software/blinkey"
         },
         {
             "title": "UFC Predictor",
             "description": "A ML model that predicts the outcome of UFC fights based on fighter statistics and match history prior to the fight. It starts by creating a fighter profile from their fight history prior (up to 6 fights) and then uses that profile against the other in order to generate a prediction (with probabilities). It also comes with a webscraper built to scrape fight data from a fighter off of UFCstats.com. It scrapes, formats, updates, checks if fighter is available for training, and checks what fighters are needed to be added to training data.",
-            "image": "src/assets/ufc.png"
+            "image": "src/assets/images/personal/ufc.png",
+            "link": "https://github.com/KodaIsshin/UFC-Fight-Predictor"
+            
+        },
+        {
+            "title": "Luminopolis",
+            "description": "A web application that consolidates Discord-like chatting for a classroom. It has features such as uploading slides, discussing said slides in the thread, and a text editor with live collaboration functionality.",
+            "image": "src/assets/images/personal/Luminopolis.png",
+            "link": "https://github.com/KodaIsshin/Luminopolis"
         },
         {
             "title": "Website Portfolio",
             "description": "The portfolio that you're looking at! This portfolio was made entirely with Svelte and is my first ever website utilizing the Svelte framework.",
-            "image": "src/assets/portfolio.png"
-        },
-        {
-            "title": "Simple Game",
-            "description": "A simple game developed in Godot, aimed to assist people with cognitive deficiencies be able to improve their function.",
-            "image": "src/assets/simple.png"
-
+            "image": "src/assets/images/personal/portfolio.png",
+            "link": "https://github.com/KodaIsshin/websiteportfolio/settings"
         }
 
     ]
