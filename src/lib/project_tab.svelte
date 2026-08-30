@@ -12,10 +12,6 @@
     async function toggleExpand() {
         const container = el.closest('.project_container');
         const first = el.getBoundingClientRect();
-
-        if(!expanded){
-            container.style.height = `${container.getBoundingClientRect().height}px`;
-        }
         const last = container.getBoundingClientRect();
         el.style.transition = "transform 0.1s ease-in-out";
         expanded = !expanded;
@@ -23,17 +19,14 @@
 
         const deltaX = last.left - first.left;
         const deltaY = last.top - first.top;
-        const scaleX = (last.width / first.width);
+        const scaleX = (last.width / first.width) - 10;
         const scaleY = (last.height / first.height);
-
-        console.log({scaleX, scaleY, deltaX, deltaY});
 
         el.style.transformOrigin = "top left";
         el.style.transform = `
             translate(${deltaX}px, ${deltaY}px)
             scale(${scaleX}, ${scaleY})
         `;
-
 
         requestAnimationFrame(() => {
             el.style.transform = "none";
@@ -77,14 +70,12 @@
             },
             {once: true}
         );
-        if(!expanded){
-            container.style.height = "";
-            showDesc = false;
-        }
-        else{
+        if (expanded) {
             setTimeout(() => {
                 showDesc = true;
-            }, 200);
+            }, 200); 
+        } else {
+            showDesc = false;
         }
     }
 </script>
@@ -93,8 +84,7 @@
     <img class="proj_img" src={image} alt={description} style="width:100%; height:100%; object-fit: cover;"/>
     {#if showDesc}
         <div class="proj_description" style="position: absolute; top: 10%; left: 10%; color: white; z-index: 2000; width: 80%; text-align: center;">
-            <!-- <h2 style="font-family: Tarawera; font-size: 2vw; margin-bottom: 20px;">{proj_title}</h2> -->
-            <a style="font-family: Tarawera; font-size: 2vw; margin-bottom: 20px" href="https://github.com/KodaIsshin/Luminopolis">{proj_title}</a>
+            <h2 style="font-family: Tarawera; font-size: 2vw; margin-bottom: 20px;">{proj_title}</h2>
             <p style="font-family: Code-New-Roman; font-size: 1.5vw; font-weight:bold">{description}</p>
         </div>
     {/if}
@@ -107,13 +97,13 @@
 
 <style>
 .proj_tab{
-    box-sizing: border-box;
     all: unset;
     background: #101010;
+    height: 20vw;
+    width: 275px;  
     display: grid;
-    grid-template-rows: 1fr auto;
     border-radius: 16px;
-    margin-top:25px;
+    margin-top: 45px;
     border: 4px solid #191919;  
     transition: transform 0.3s ease-in-out, width 0.3s ease, height 0.3s ease, top 0.3s ease, left 0.3s ease;
     overflow: hidden;
@@ -130,11 +120,7 @@
     cursor: pointer;
     z-index: 1001;
 }
-
 .proj_img{
-    min-height: 0;
-    min-width: 0;
-    overflow: hidden;
     transition: filter 0.3s ease-in-out;
 }
 .title_txt{
