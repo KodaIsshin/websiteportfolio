@@ -61,7 +61,7 @@
     <p class="intro_content">
       I'm a student currently attending the University of Southern California
       under the Computer Science Games program. I'm blessed to be able to 
-      pursue a plethora of varying interests, such as Game Development, AI/ML and music. 
+      pursue a plethora of varying interests, such as Game Development, Software Engineering and music. 
     </p>
     <p class="intro_disclaimer">
       disclaimer: Koda is simply a nickname and not to confuse with other trademarked entities

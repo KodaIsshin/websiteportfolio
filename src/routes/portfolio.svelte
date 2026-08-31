@@ -42,7 +42,28 @@
  import HeartIcon3 from "../assets/images/games/Bullet Spread/Heart Icon-3 copy.png"
  import HeartIcon4 from "../assets/images/games/Bullet Spread/Heart Icon-4 copy.png"
  import HeartIcon5 from "../assets/images/games/Bullet Spread/Heart Icon-5 copy.png"
+ import bulletspreadBanner from "../assets/images/games/Bullet Spread/bullet_spread_banner.png"
  import Pistol from "../assets/images/games/Bullet Spread/Pistol_gun-1 copy.png"
+ import UnarmedGameplay1 from "../assets/videos/UnarmedGameplayDemo1.mp4";
+ import UnarmedGameplay2 from "../assets/videos/UnarmedGameplayDemo2.mp4";
+ import UnarmedGameplay3 from "../assets/videos/UnarmedGameplayDemo3.mp4";
+ import UnarmedAbilityShowcase from"../assets/videos/UnarmedAbilityShowcase.mp4";
+ import UnarmedDialogueShowcase from"../assets/videos/UnarmedDialogueShowcase.mp4";
+ import ShotgunIdle from "../assets/videos/ShotgunIdle.mp4";
+ import ShotgunMelee from "../assets/videos/ShotgunMelee.mp4";
+ import ShotgunParry from "../assets/videos/ShotgunParry.mp4";
+ import ShotgunShooting from "../assets/videos/ShotgunShooting.mp4";
+ import PistolIdle from "../assets/videos/PistolIdle.mp4";
+ import PistolMelee from "../assets/videos/PistolMelee.mp4";
+ import PistolParry from "../assets/videos/PistolParry.mp4";
+ import PistolShooting from "../assets/videos/PistolShooting.mp4";
+ import BasketballShowcase1 from "../assets/videos/BasketballShowcase1.mp4";
+ import BasketballShowcase2 from "../assets/videos/BasketballShowcase2.mp4";
+ import BasketballShowcase3 from "../assets/videos/BasketballShowcase3.mp4";
+ import GrapplingShowcase from "../assets/videos/GrapplingShowcase.mp4";
+ import BulletSpreadShowcase1 from "../assets/videos/BulletSpreadGameplay1.mp4";
+ import BulletSpreadShowcase2 from "../assets/videos/BulletSpreadGameplay2.mp4";
+ import BulletSpreadShowcase3 from "../assets/videos/BulletSpreadGameplay3.mp4";
 
  let leftText = "KEITH"
  let portfolio_idx = 0;
@@ -94,7 +115,56 @@
                 <div class="unarmed_gameplay">
                     <h1 style="align-text: left;"class="gameplay_header">Gameplay Engineering</h1>
                     <div class="gameplay_container">
-                        
+                        <video
+                            class = "gameplay_clip"
+                            autoplay
+                            loop
+                            playsinline
+                            disablepictureinpicture
+                            >
+                                <track kind="captions"/>
+                                <source type="video/mp4" src={UnarmedGameplay1}>
+                        </video>
+                        <video
+                            class = "gameplay_clip"
+                            autoplay
+                            loop
+                            playsinline
+                            disablepictureinpicture
+                            >
+                                <track kind="captions"/>
+                                <source type="video/mp4" src={UnarmedGameplay2}>
+                        </video>
+                        <video
+                            class = "gameplay_clip"
+                            autoplay
+                            loop
+                            playsinline
+                            disablepictureinpicture
+                            >
+                                <track kind="captions"/>
+                                <source type="video/mp4" src={UnarmedGameplay3}>
+                        </video>
+                        <video
+                            class = "gameplay_clip"
+                            autoplay
+                            loop
+                            playsinline
+                            disablepictureinpicture
+                            >
+                                <track kind="captions"/>
+                                <source type="video/mp4" src={UnarmedAbilityShowcase}>
+                        </video>
+                        <video
+                            class = "gameplay_clip"
+                            autoplay
+                            loop
+                            playsinline
+                            disablepictureinpicture
+                            >
+                                <track kind="captions"/>
+                                <source type="video/mp4" src={UnarmedDialogueShowcase}>
+                        </video>
                     </div>
                     <h2 style="font-family: FivoSans; margin-bottom: 0;" class="gameplay_contributions_header">Contributions</h2>
                     <ul class = "gameplay_list" style="margin-top: 0; margin-bottom: 0;">
@@ -122,12 +192,86 @@
                         </div>
                     <h2 style="font-family: FivoSans; margin-bottom: 0;" class="three-d_design_header">3D Animation</h2>
                     <div class="three-d_container">
-                        <img src={current_characterfront} alt="current_character_front"/>
-                        <img src={current_characterback} alt="current_character_back"/>
-                        <img src={current_characterside} alt="current_character_side"/>
-                        <img src={pistol_side1} alt="pistol_side1"/>
-                        <img src={pistol_side2} alt="pistol_side2"/>
-                        <img src={lever_action} alt="lever_action"/>
+                        <video
+                            class = "gameplay_clip"
+                            autoplay
+                            loop
+                            playsinline
+                            disablepictureinpicture
+                            >
+                                <track kind="captions"/>
+                                <source type="video/mp4" src={ShotgunShooting}>
+                        </video>
+                        <video
+                            class = "gameplay_clip"
+                            autoplay
+                            loop
+                            playsinline
+                            disablepictureinpicture
+                            >
+                                <track kind="captions"/>
+                                <source type="video/mp4" src={ShotgunIdle}>
+                        </video>
+                        <video
+                            class = "gameplay_clip"
+                            autoplay
+                            loop
+                            playsinline
+                            disablepictureinpicture
+                            >
+                                <track kind="captions"/>
+                                <source type="video/mp4" src={ShotgunMelee}>
+                        </video>
+                        <video
+                            class = "gameplay_clip"
+                            autoplay
+                            loop
+                            playsinline
+                            disablepictureinpicture
+                            >
+                                <track kind="captions"/>
+                                <source type="video/mp4" src={ShotgunParry}>
+                        </video>
+                        <video
+                            class = "gameplay_clip"
+                            autoplay
+                            loop
+                            playsinline
+                            disablepictureinpicture
+                            >
+                                <track kind="captions"/>
+                                <source type="video/mp4" src={PistolShooting}>
+                        </video>
+                        <video
+                            class = "gameplay_clip"
+                            autoplay
+                            loop
+                            playsinline
+                            disablepictureinpicture
+                            >
+                                <track kind="captions"/>
+                                <source type="video/mp4" src={PistolIdle}>
+                        </video>
+                        <video
+                            class = "gameplay_clip"
+                            autoplay
+                            loop
+                            playsinline
+                            disablepictureinpicture
+                            >
+                                <track kind="captions"/>
+                                <source type="video/mp4" src={PistolMelee}>
+                        </video>
+                        <video
+                            class = "gameplay_clip"
+                            autoplay
+                            loop
+                            playsinline
+                            disablepictureinpicture
+                            >
+                                <track kind="captions"/>
+                                <source type="video/mp4" src={PistolParry}>
+                        </video>
                     </div>
                     <h2 style="font-family: FivoSans; margin-bottom: 0;" class="two-d_design_header">2D Design</h2>
                     <div class="two-d_container">
@@ -163,26 +307,66 @@
                 <h1 class="game_header">
                     <a href="https://berserkerbray.itch.io/bullet-spread" target="_blank" rel="noreferrer">BULLET SPREAD</a>
                 </h1>
-                <img class="unarmed_img" src="src/assets/images/games/Unarmed/Logo Editable.jpg" alt="Unarmed Logo"/>
+                <img style="margin-bottom: 10px;"class="unarmed_img" src={bulletspreadBanner} alt="Unarmed Logo"/>
                 <p class="unarmed_desc">
                     Bullet Spread is a metroidvania project built for a game jam for duos. This game was created within a 2 week period given the constraints of going along the theme of "It's spreading".
                     <br/>
                     <br/>
-                    This game jam was a learning process for thinking quickly on ideas and making sure our ideas got to production, development, and release quickly and on deadline. As opposed to Unarmed, this game was integral to the hard skills of management that game devs must have in order to properly work together.
+                    This game jam was a learning process for thinking quickly on ideas and making sure our ideas got to production, development, and release quickly and on deadline. This game was integral to the hard skills of management that game devs must have in order to properly work together.
                     Above is a link to the game on itch.io if you wish to play it.
                 </p>
                 <div class="unarmed_gameplay">
                     <h1 style="align-text: left;"class="gameplay_header">Gameplay Engineering</h1>
                     <div class="gameplay_container">
-                        
+                        <video
+                            class = "gameplay_clip"
+                            autoplay
+                            loop
+                            playsinline
+                            disablepictureinpicture
+                            >
+                                <track kind="captions"/>
+                                <source type="video/mp4" src={BulletSpreadShowcase1}>
+                        </video>
+                        <video
+                            class = "gameplay_clip"
+                            autoplay
+                            loop
+                            playsinline
+                            disablepictureinpicture
+                            >
+                                <track kind="captions"/>
+                                <source type="video/mp4" src={BulletSpreadShowcase2}>
+                        </video>
+                        <video
+                            class = "gameplay_clip"
+                            autoplay
+                            loop
+                            playsinline
+                            disablepictureinpicture
+                            >
+                                <track kind="captions"/>
+                                <source type="video/mp4" src={BulletSpreadShowcase3}>
+                        </video>
                     </div>
                     <h2 style="font-family: FivoSans; margin-bottom: 0;" class="gameplay_contributions_header">Contributions</h2>
+                    <ul class = "gameplay_list" style="margin-top: 0; margin-bottom: 0;">
+                        <li>Worked on the movement and shooting system where the shooting accuracy lowers the more you shoot.</li>
+                        <li>Developed health system and UI logic.</li>
+                    </ul>
                 </div>
                 <div class="unarmed_design">
-                    <h2 style="font-family: FivoSans; margin-bottom: 0;" class="two-d_design_header">2D Design</h2>
+                    <h1 style="font-family: FivoSans; margin-bottom: 0;" class="two-d_design_header">2D Design</h1>
                     <div class="two-d_container">
-                            <img src={Logo} alt="logo-banner.jpg"/>
-                            <img src={HeadLogo} alt="head_logo.png"/>
+                        <img src={HeartIcon1} alt ="heart_icon1.png"/>
+                        <img src={HeartIcon2} alt ="heart_icon2.png"/>
+                        <img src={HeartIcon3} alt ="heart_icon3.png"/>
+                        <img src={HeartIcon4} alt ="heart_icon4.png"/>
+                        <img src={HeartIcon5} alt ="heart_icon5.png"/>
+                        <img src={BossAsset} alt="boss_asset.png"/>
+                        <img src={ButterflyDemon} alt="butterfly_demon.png"/>
+                        <img src={Grave} alt ="grave.png"/>
+                        <img src={Pistol} alt="pistol.png"/>
                     </div>
                 </div>
                 <p>
@@ -200,14 +384,8 @@
                     This game allowed me to study the appeal of retro sounds to spur engagement, building off of user feedback with a direct tester, and designing with a target audience in mind. The link in the header will direct you
                     to a google drive that has documentation of the game modes and testing.
                 </p>
-                <div class="unarmed_gameplay">
-                    <h1 style="align-text: left;"class="gameplay_header">Gameplay Engineering</h1>
-                    <div class="gameplay_container">
-                        
-                    </div>
-                </div>
                 <div class="unarmed_design">
-                    <h2 style="font-family: FivoSans; margin-bottom: 0;" class="two-d_design_header">2D Design</h2>
+                    <h2 style="font-family: FivoSans; margin-bottom: 0;" class="two-d_design_header">Game Preview</h2>
                     <div class="two-d_container">
                         <img src={SimpleMenu} alt="simple_menu.png"/>
                         <img src={SimpleAim} alt="simple_aim.png"/>
@@ -227,13 +405,52 @@
                 <h1 class="game_header">UNITY ENGINEERING</h1>
                 <div class="unarmed_design">
                     <h1 style="align-text: left; margin-bottom: 0;" class="design_header">Basketball Prototype</h1>
-                        <div class="three-d_container">
-
+                        <div class="gameplay_container">
+                            <video
+                            class = "gameplay_clip"
+                            autoplay
+                            loop
+                            playsinline
+                            disablepictureinpicture
+                            >
+                                <track kind="captions"/>
+                                <source type="video/mp4" src={BasketballShowcase1}>
+                            </video>
+                            <video
+                            class = "gameplay_clip"
+                            autoplay
+                            loop
+                            playsinline
+                            disablepictureinpicture
+                            >
+                                <track kind="captions"/>
+                                <source type="video/mp4" src={BasketballShowcase2}>
+                            </video>
+                            <video
+                            class = "gameplay_clip"
+                            autoplay
+                            loop
+                            playsinline
+                            disablepictureinpicture
+                            >
+                                <track kind="captions"/>
+                                <source type="video/mp4" src={BasketballShowcase3}>
+                            </video>
                         </div>
                 </div>
                 <div class="unarmed_design">
                     <h1 style="align-text: left; margin-bottom: 0;" class="design_header">Grappling Traversal Prototype</h1>
-                        <div class="three-d_container">
+                        <div style="justify-content: center;" class="gameplay_container">
+                        <video
+                            class = "gameplay_clip"
+                            autoplay
+                            loop
+                            playsinline
+                            disablepictureinpicture
+                            >
+                                <track kind="captions"/>
+                                <source type="video/mp4" src={GrapplingShowcase}>
+                            </video>
                         </div>
                 </div>
 
@@ -336,15 +553,11 @@ main{
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    overflow: scroll;
+    overflow: hidden;
+
     align-self: center;
     
 }
-
-div::-webkit-scrollbar{
-    display:none;
-}
-
 h1{
 font-family: FivoSans;
 }
@@ -352,6 +565,16 @@ font-family: FivoSans;
 .unarmed_img{
     align-self: center;
     width: 50%
+}
+
+.gameplay_clip{
+    object-fit: contain;
+    max-width:100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    padding: 5px 5px;
+    box-sizing: border-box;
 }
 
 .game_header{
@@ -443,12 +666,15 @@ p{
 
 .gameplay_container{
     width: 100%;
-    min-height: 300px;
+    min-height: 200px;
+    height: 400px;
     border: 2px solid #ffffff;
     align-self: center;
     overflow: scroll;
     display: flex;
     flex-direction: row;
+    overflow-y: hidden;
+    overflow-x: scroll;
 }
 
 
